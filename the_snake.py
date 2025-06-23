@@ -24,6 +24,9 @@ HEAD_COLOR = (0, 200, 0)
 # Скорость движения змейки:
 SPEED = 10
 
+# Константа очков
+SCORE = (255, 255, 255)
+
 # Настройка игрового окна:
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), 0, 32)
 pygame.display.set_caption('Змейка')
@@ -178,7 +181,7 @@ def main():
         apple.draw()
         snake.draw()
 
-        score_text = font.render(f'Score: {score}', True, (255, 255, 255))
+        score_text = font.render(f'Score: {score}', True, SCORE)
         screen.blit(score_text, (5, 5))
 
         pygame.display.update()
